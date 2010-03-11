@@ -32,10 +32,10 @@ class uzblClient(wmanager.Client, border.BorderClient):
 		if self.tilesize:
 			w,h = self.follow_size_hints(self.tilesize['width'],
 				self.tilesize['height'])
-			if w > self.self.tilesize['width']:
-				w = self.self.tilesize['width']
-			if h > self.self.tilesize['height']:
-				h = self.self.tilesize['height']
+			if w > self.tilesize['width']:
+				w = self.tilesize['width']
+			if h > self.tilesize['height']:
+				h = self.tilesize['height']
 			wmanager.Client.configure(self, x=self.tilesize['x'],
 				y=self.tilesize['y'], width=w, height=h)
 		else:
