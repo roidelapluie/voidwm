@@ -151,7 +151,7 @@ class voidScreen(wmanager.Screen, color.Color):
 
 	def next_window(self):
 		c = self.bureaux[self.bureau].count(self.wm.current_client)
-		if c != 0 and self.bureauxe[self.bureau] in (1,2):
+		if c != 0 and self.bureauxe[self.bureau] in (1,2,3):
 			d = self.bureaux[self.bureau].index(self.wm.current_client)+1
 			try: self.bureaux[self.bureau][d].raisewindow()
 			except:  self.bureaux[self.bureau][0].raisewindow()
