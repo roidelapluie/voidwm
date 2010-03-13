@@ -9,7 +9,6 @@ def debug(t):
 
 class uzblClient(wmanager.Client, border.BorderClient):
 	def __init__(self, screen, window, maprequest):
-		debug(' -- client -- init')
 		self.firstConf = True
 		self.tilesize = None
 		self.allow_resize = False
@@ -185,7 +184,6 @@ class voidScreen(wmanager.Screen, color.Color):
 				self.bureaux[self.bureau][c].tilesize={
 					'x':w[0], 'y':w[1],
 					'width': w[2], 'height':w[3]}
-				debug("we want "+str(w))
 				self.bureaux[self.bureau][c].moveresize(w[0],w[1],w[2],w[3])
 				c+=1
 			if self.popup_u:
