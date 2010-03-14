@@ -1,7 +1,7 @@
 from plwm import wmanager, focus, border, color, wmevents
 from tiling import *
 from Xlib import X, Xutil, protocol
-from os import popen2, system
+from os import system
 import keybindings
 
 def debug(t):
