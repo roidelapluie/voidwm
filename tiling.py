@@ -106,11 +106,3 @@ def getLayout(n, p):
 			i+=1
 	return pos
 
-def fixit(client, window):
-	cclass = window.get_wm_class()
-		#client.deiconify()
-		#client.tilesize = {'x':0, 'y': 1180, 'width': 100, 'height':800}
-		#client.moveresize(0,1180,100,800, True)
-
-for i in range (1,7):
-	getLayout(i,4)
