@@ -18,7 +18,7 @@ class keyShorcuts(keys.KeyHandler):
 	def M4_F6(self, event):
 		self.wm.current_screen.redraw_wins()
 	def M4_x(self, event):
-		act = system('dmenu_run &')
+		act = self.wm.system('dmenu_run &')
 	def M4_k(self, event):
 		if self.wm.current_client:
 			self.wm.current_client.destroy()
