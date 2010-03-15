@@ -56,7 +56,7 @@ class voidScreen(wmanager.Screen, color.Color):
 		self.nbureaux = 5
 		self.popup_u = False
 		self.popup = None
-		self.bureauxe = [2,1,2,3,4]
+		self.bureauxe = [4,1,3,0,4]
 		self.bureaux = [[], [], [], [], []]
 		wmanager.Screen.__init__(self, wm, screenNo)
 		
