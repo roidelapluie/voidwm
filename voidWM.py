@@ -115,11 +115,13 @@ class voidScreen(wmanager.Screen, color.Color):
 	def define_popup(self, c):
 		if self.popup:
 			try:
+				self.bureaux[self.bureau].remove(c)
+				c.bureau = 'p'	
+			except:
+				pass
+			try:
 				self.bureaux[self.bureau].append(self.popup)
 				self.popup.bureau = self.bureau
-				self.bureaux[self.bureau].remove(c)
-				c.bureau = 'p'
-				self.redraw_wins()
 			except:
 				pass
 		self.popup = c
@@ -130,6 +132,7 @@ class voidScreen(wmanager.Screen, color.Color):
 			'width': w[2], 'height':w[3]}
 		c.moveresize(w[0],w[1],w[2],w[3], True)
 		self.popup_up()
+		self.redraw_wins()
 
 	def switch_popup(self):
 		if self.popup_u:
