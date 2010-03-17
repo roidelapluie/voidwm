@@ -114,6 +114,8 @@ class voidScreen(wmanager.Screen, color.Color):
 
 	def define_popup(self, c):
 		if self.popup:
+			if c == self.popup:
+				return
 			try:
 				self.bureaux[self.bureau].remove(c)
 				c.bureau = 'p'	
